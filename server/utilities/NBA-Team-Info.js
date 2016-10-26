@@ -1,23 +1,22 @@
-let http = require('http');
-let RequestPromise = require('request-promise');
+let RequestPromise = require('request-promise');  // npm library that turns a http callback into a promise
 
 // ESPN NBA Webscraper for NBA team league info
 // Input: 	Desired year of NBA team league information in the format of XXXX
 // Output: 	An array of all NBA teams in the following format:
-//				{ 	name: 'NBA Team Name', 
-//					abbr: 'NBA Team Name Abbreviation', 
+//				{ 	name: 'NBA Team Name',
+//					abbr: 'NBA Team Name Abbreviation',
 //					wins: 'NBA Team Wins for year XXXX ' }
 // notes: ESPN only provides info dating back to 2002.
 
 module.exports = year => {
 
 	let host = 'http://www.espn.com';
-	let espnPath = 
+	let espnPath =
 			year >= (new Date()).getFullYear() || year <= 2002 ?
-			'/nba/standings/_/group/league' : 
+			'/nba/standings/_/group/league' :
 			'/nba/standings/_/season/' + year + '/group/league';
 
-	return RequestPromise( host + espnPath )
+	return RequestPromise( host + espnPath ) // eslint-disable-line new-cap
 	.then( response => {
 		return scrapeESPN_HTML(response);
 	})
@@ -28,7 +27,7 @@ function scrapeESPN_HTML(nbaPage){
 	let teamTokens = nbaPage.split(teamTokenizer);
 	let nbaTeamsInfo = [];
 
-	for(let i = 1; i < teamTokens.length; i++ ){ // starting at 1 here because the first token is garbage
+	for (let i = 1; i < teamTokens.length; i++ ){ // starting at 1 here because the first token is garbage
 		nbaTeamsInfo.push(parseTeamInfo( teamTokens[i]) );
 	}
 

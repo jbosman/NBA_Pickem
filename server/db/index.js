@@ -6,7 +6,8 @@ module.exports = db;
 let User = require(		'./models/user');
 let Team = require(		'./models/team');
 let League = require(	'./models/league');
-let NBA_Team = require( './models/nba_team');
+//let NBA_Team = require( './models/nba_team');
 /* eslint-enable no-unused-vars */
 
 // Associations
+

@@ -3,7 +3,7 @@ var router = require('express').Router(); // eslint-disable-line new-cap
 module.exports = router;
 
 // Fill in routes here
-//router.use('/tbd', require('./tbd'));
+router.use('/nba-teams', require('./nba-teams'));
 
 // Make sure this is after all of
 // the registered routes!
