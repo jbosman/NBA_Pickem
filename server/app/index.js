@@ -34,7 +34,6 @@ module.exports = function (db) {
     });
 
     app.get('/*', function (req, res) {
-        
         res.sendFile(app.get('indexHTMLPath'));
     });
 
