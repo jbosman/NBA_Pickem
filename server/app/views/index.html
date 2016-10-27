@@ -2,21 +2,33 @@
 <html lang="en">
 
 	<head>
+	<base href="/" />
 	<link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
 	<link href = "style.css" rel = "stylesheet">
+	<script type="text/javascript" src = 'angular/angular.js'></script>
+	<script type="text/javascript" src = 'angular-ui-router/release/angular-ui-router.js'></script>
+	<script type="text/javascript" src = 'main.js'></script>
 	</head>
 
-	<body>
+	<body ng-app='NBA_Pickem_App'>
 		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
 			<div class="container-fluid">
-				<img class="brandImg" src="img/jordon-logo.png">
-				<button type="button" class="btn btn-default navbar-btn navbar-right btn-primary">Login</button>
-				<button type="button" class="btn btn-default navbar-btn navbar-right">Register</button>
+				<span class='navbar-leftside col-md-6 col-sm-6'>
+					<img class="navBarImg clearfix" src="img/jumpman-logo-cust.png">
+				</span>
+				<span class='navbar-rightside col-md-6 col-sm-6'>
+					<button type="button" class="btn btn-default navbar-btn navbar-right btn-primary">Login</button>
+					<button type="button" class="btn btn-default navbar-btn navbar-right">Register</button>
+				</span>
 			</div>
 		</nav>
 
 		<div class="container">
+			<ui-view></ui-view>
+		</div>
+
+		<!-- <div class="container">	
 	    	<h1> Hello World! </h1>
-	    </div>
+	    </div> -->
 	</body>
 </html>
