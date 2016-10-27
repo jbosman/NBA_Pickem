@@ -7,9 +7,5 @@ module.exports = db.define( 'team', {
 		allowNull: false,
 		isAlphanumeric: true,
 		len: [6, 25]
-	},
-	nba_teams : {
-		type: Sequelize.ARRAY(Sequelize.INTEGER),
-		allowNull: false
 	}
 });
