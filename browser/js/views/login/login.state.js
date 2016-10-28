@@ -7,7 +7,7 @@ app.config(function($stateProvider){
 	})
 });
 
-app.controller('LoginCtrl', function ($scope, AuthService, $state) {
+app.controller('LoginCtrl', function ($scope, AuthService, $state, UserFactory) {
 
     $scope.login = {};
     $scope.error = null;
@@ -16,11 +16,9 @@ app.controller('LoginCtrl', function ($scope, AuthService, $state) {
 
         $scope.error = null;
 
-        AuthService.login(loginInfo).then(function () {
-            $state.go('league');
-        }).catch(function () {
-            $scope.error = 'Invalid login credentials.';
-        });
+        AuthService.login(loginInfo).then( () => UserFactory.initUserFactory() )
+        .then( () => { $state.go('user') })
+        .catch( () => { $scope.error = 'Invalid login credentials.' });
 
     };
 

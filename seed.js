@@ -52,7 +52,7 @@ function seedNBATeams(teams){
 }
 
 function seedLeague(){
-    return League.create();
+    return League.create({name: "Bosmans Shed 2016"});
 }
 
 function seedTeams(){

@@ -4,6 +4,7 @@ module.exports = router;
 
 // Fill in routes here
 router.use('/nba-teams', require('./nba-teams'));
+router.use('/team', require('./team'));
 router.use('/league', require('./league'));
 
 // Make sure this is after all of
