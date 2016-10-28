@@ -1,16 +1,15 @@
-// app.factory('LeagueFactory', function($http){
+app.factory('LeagueFactory', function($http, $stateParams){
 
-// 	let usersLeagues = [];
-// 	let leagueTeams = [];
+	function getLeagueTeams(){
+		return $http.get('/api/league/' + $stateParams.id + '/teams' )
+		.then( response => {
+			return response.data;
+		})
+	}
 
-// 	function initLeagueFactory(userId){
-// 		$http.get()
-// 	}
+	return {
+		getLeagueTeams: getLeagueTeams,
 
+	}
 
-// 	return {
-// 		initLeagueFactory: initLeagueFactory,
-
-// 	}
-
-// });
+});

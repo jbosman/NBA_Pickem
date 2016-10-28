@@ -4,7 +4,7 @@ let Team = require('../../../db/_db').model('team');
 
 module.exports = app;
 
-app.get( '/:id', (req, res, next) => {
+app.get( '/:id/teams', (req, res, next) => {
 
 	Team.findAll({ where: {
 		leagueId: req.params.id

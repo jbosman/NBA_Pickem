@@ -23,7 +23,7 @@ app.get( '/user/:id', (req, res, next) => {
 });
 
 // Returns all teams for a given league id
-app.get( 'league/:id', (req, res, next) => {
+app.get( '/league/:id', (req, res, next) => {
 
 	Team.findAll({ where: {
 		leagueId: req.params.id
@@ -32,5 +32,18 @@ app.get( 'league/:id', (req, res, next) => {
 		res.send(teamsInLeague);
 	})
 	.catch(next)
+
+});
+
+app.get( '/:id/nba_teams', (req, res, next) =>{
+
+	Team.findOne({ where: { 
+		id: req.params.id
+	}})
+	.then( team => {
+		return team.getNbaTeams();
+	})
+	.then( nbaTeams => { res.send(nbaTeams) })
+	.catch(next);
 
 });
