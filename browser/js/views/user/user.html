@@ -3,6 +3,10 @@
 	<span class='col-md-6 col-sm-6'><h2>League Name</h2></span>
 </div>
 <div ng-repeat='team in userTeams'>
-	<span class='col-md-6 col-sm-6'><h3>{{team.name}}</h3></span>
-	<span class='col-md-6 col-sm-6'><h3>{{team.league.name}}</h3></span>
+	<a ui-sref='team({ id: team.id })'>
+		<span class='col-md-6 col-sm-6'><h3>{{team.name}}</h3></span>
+	</a>
+	<a ui-sref='league({ id: team.league.id })'>
+		<span class='col-md-6 col-sm-6'><h3>{{team.league.name}}</h3></span>
+	</a>
 </div>
