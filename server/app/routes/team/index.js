@@ -35,9 +35,9 @@ app.get( '/league/:id', (req, res, next) => {
 
 });
 
-app.get( '/:id/nba_teams', (req, res, next) =>{
+app.get( '/:id/nba_teams', (req, res, next) => {
 
-	Team.findOne({ where: { 
+	Team.findOne({ where: {
 		id: req.params.id
 	}})
 	.then( team => {

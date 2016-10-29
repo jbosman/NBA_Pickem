@@ -5,4 +5,4 @@ app.controller( 'TeamCtrl', ($scope, TeamFactory) => {
 		$scope.nbaTeams = nbaTeams
 	})
 
-})
+});
