@@ -14,9 +14,214 @@ body {
 .navbar {
   background: linear-gradient(90deg, #0837B6 50%, #F64657 50%); }
 
-.LAC {
-  width: 50px;
+.ATL {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
   height: 50px;
-  background: url(img/nba-logos.jpg) 0 0; }
+  background-position: center 0px;
+  align: center; }
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyIsImRpcmVjdGl2ZXMvbmF2YmFyL21haW4uc2NzcyIsIm5iYS1sb2dvcy9tYWluLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG5cdG1hcmdpbi10b3A6IDEwJTtcbn1cblxuQGltcG9ydCAnZGlyZWN0aXZlcy9uYXZiYXIvbWFpbic7XG5AaW1wb3J0ICduYmEtbG9nb3MvbWFpbic7IiwiLm5hdkJhckltZyB7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0bGVmdDogNDcuNzUlO1xuXHR3aWR0aDogNSU7XG59XG5cbi5uYXZiYXItYnRuIHtcblx0bWFyZ2luLXRvcDogMSU7XG5cdG1hcmdpbi1yaWdodDogMSU7XG5cdGZsb2F0OiByaWdodDtcbn1cblxuLm5hdmJhcntcblx0YmFja2dyb3VuZDpsaW5lYXItZ3JhZGllbnQoOTBkZWcsICMwODM3QjYgNTAlLCAjRjY0NjU3IDUwJSlcbn0iLCIuTEFDIHtcblx0d2lkdGg6IDUwcHg7XG5cdGhlaWdodDpcdDUwcHg7XG5cdGJhY2tncm91bmQ6IHVybChpbWcvbmJhLWxvZ29zLmpwZykgMCAwO1xufSJdLCJtYXBwaW5ncyI6IkFBQUEsQUFBQSxJQUFJLENBQUM7RUFDSixVQUFVLEVBQUUsR0FBSSxHQUNoQjs7QUNGRCxBQUFBLFVBQVUsQ0FBQztFQUNWLFFBQVEsRUFBRSxRQUFTO0VBQ25CLElBQUksRUFBRSxNQUFPO0VBQ2IsS0FBSyxFQUFFLEVBQUcsR0FDVjs7QUFFRCxBQUFBLFdBQVcsQ0FBQztFQUNYLFVBQVUsRUFBRSxFQUFHO0VBQ2YsWUFBWSxFQUFFLEVBQUc7RUFDakIsS0FBSyxFQUFFLEtBQU0sR0FDYjs7QUFFRCxBQUFBLE9BQU8sQ0FBQTtFQUNOLFVBQVUsRUFBQyxnREFBZSxHQUMxQjs7QUNkRCxBQUFBLElBQUksQ0FBQztFQUNKLEtBQUssRUFBRSxJQUFLO0VBQ1osTUFBTSxFQUFFLElBQUs7RUFDYixVQUFVLEVBQXVCLHNCQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsR0FDdEMiLCJuYW1lcyI6W119 */
+.BOS {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -100px;
+  align: center; }
+
+.NO {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -200px;
+  align: center; }
+
+.CHI {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -300px;
+  align: center; }
+
+.CLE {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -400px;
+  align: center; }
+
+.DAL {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -500px;
+  align: center; }
+
+.DEN {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -600px;
+  align: center; }
+
+.DET {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -700px;
+  align: center; }
+
+.GS {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -800px;
+  align: center; }
+
+.HOU {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -900px;
+  align: center; }
+
+.IND {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1000px;
+  align: center; }
+
+.LAC {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1100px;
+  align: center; }
+
+.LAL {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1200px;
+  align: center; }
+
+.MIA {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1300px;
+  align: center; }
+
+.MIL {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1400px;
+  align: center; }
+
+.MIN {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1500px;
+  align: center; }
+
+.BKN {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1600px;
+  align: center; }
+
+.NY {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1700px;
+  align: center; }
+
+.ORL {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1800px;
+  align: center; }
+
+.PHI {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -1900px;
+  align: center; }
+
+.PHX {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2000px;
+  align: center; }
+
+.POR {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2100px;
+  align: center; }
+
+.SAC {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2200px;
+  align: center; }
+
+.SA {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2300px;
+  align: center; }
+
+.OKC {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2400px;
+  align: center; }
+
+.UTAH {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2500px;
+  align: center; }
+
+.WSH {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2600px;
+  align: center; }
+
+.TOR {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2700px;
+  align: center; }
+
+.MEM {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2800px;
+  align: center; }
+
+.CHA {
+  background-image: url("img/teams-nba-sprite.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: center -2900px;
+  align: center; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyIsImRpcmVjdGl2ZXMvbmF2YmFyL21haW4uc2NzcyIsIm5iYS1sb2dvcy9tYWluLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG5cdG1hcmdpbi10b3A6IDEwJTtcbn1cblxuQGltcG9ydCAnZGlyZWN0aXZlcy9uYXZiYXIvbWFpbic7XG5AaW1wb3J0ICduYmEtbG9nb3MvbWFpbic7IiwiLm5hdkJhckltZyB7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0bGVmdDogNDcuNzUlO1xuXHR3aWR0aDogNSU7XG59XG5cbi5uYXZiYXItYnRuIHtcblx0bWFyZ2luLXRvcDogMSU7XG5cdG1hcmdpbi1yaWdodDogMSU7XG5cdGZsb2F0OiByaWdodDtcbn1cblxuLm5hdmJhcntcblx0YmFja2dyb3VuZDpsaW5lYXItZ3JhZGllbnQoOTBkZWcsICMwODM3QjYgNTAlLCAjRjY0NjU3IDUwJSlcbn0iLCIkTkJBX1RFQU1TOiAoIFxuJy5BVEwnLFxuJy5CT1MnLFxuJy5OTycsXG4nLkNISScsXG4nLkNMRScsXG4nLkRBTCcsXG4nLkRFTicsXG4nLkRFVCcsXG4nLkdTJyxcbicuSE9VJyxcbicuSU5EJyxcbicuTEFDJyxcbicuTEFMJyxcbicuTUlBJyxcbicuTUlMJyxcbicuTUlOJyxcbicuQktOJyxcbicuTlknLFxuJy5PUkwnLFxuJy5QSEknLFxuJy5QSFgnLFxuJy5QT1InLFxuJy5TQUMnLFxuJy5TQScsXG4nLk9LQycsXG4nLlVUQUgnLFxuJy5XU0gnLFxuJy5UT1InLFxuJy5NRU0nLFxuJy5DSEEnLFxuKTtcblxuJHZJbmNyZW1lbnQ6IC0xMDA7XG5cbkBlYWNoICR0ZWFtIGluICROQkFfVEVBTVMge1xuXHQjeyR0ZWFtfSB7XG5cdGJhY2tncm91bmQtaW1hZ2U6IHVybCgnaW1nL3RlYW1zLW5iYS1zcHJpdGUucG5nJyk7XG4gIFx0YmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgXHRoZWlnaHQ6IDUwcHg7XG4gIFx0YmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyICN7IChpbmRleCgkTkJBX1RFQU1TLCAkdGVhbSkgLSAxKSAqICR2SW5jcmVtZW50fXB4O1xuICBcdGFsaWduOiBjZW50ZXI7XG4gIH1cbn0iXSwibWFwcGluZ3MiOiJBQUFBLEFBQUEsSUFBSSxDQUFDO0VBQ0osVUFBVSxFQUFFLEdBQUksR0FDaEI7O0FDRkQsQUFBQSxVQUFVLENBQUM7RUFDVixRQUFRLEVBQUUsUUFBUztFQUNuQixJQUFJLEVBQUUsTUFBTztFQUNiLEtBQUssRUFBRSxFQUFHLEdBQ1Y7O0FBRUQsQUFBQSxXQUFXLENBQUM7RUFDWCxVQUFVLEVBQUUsRUFBRztFQUNmLFlBQVksRUFBRSxFQUFHO0VBQ2pCLEtBQUssRUFBRSxLQUFNLEdBQ2I7O0FBRUQsQUFBQSxPQUFPLENBQUE7RUFDTixVQUFVLEVBQUMsZ0RBQWUsR0FDMUI7O0FDc0JBLEFBQUEsSUFBSSxDQUFKO0VBQ0EsZ0JBQWdCLEVBQUUsK0JBQUc7RUFDbkIsaUJBQWlCLEVBQUUsU0FBVTtFQUM3QixNQUFNLEVBQUUsSUFBSztFQUNiLG1CQUFtQixFQUFFLE1BQU0sQ0FBQyxHQUFrRDtFQUM5RSxLQUFLLEVBQUUsTUFBTyxHQUNkOztBQU5GLEFBQUEsSUFBSSxDQUFKO0VBQ0EsZ0JBQWdCLEVBQUUsK0JBQUc7RUFDbkIsaUJBQWlCLEVBQUUsU0FBVTtFQUM3QixNQUFNLEVBQUUsSUFBSztFQUNiLG1CQUFtQixFQUFFLE1BQU0sQ0FBQyxNQUFrRDtFQUM5RSxLQUFLLEVBQUUsTUFBTyxHQUNkOztBQU5GLEFBQUEsR0FBRyxDQUFIO0VBQ0EsZ0JBQWdCLEVBQUUsK0JBQUc7RUFDbkIsaUJBQWlCLEVBQUUsU0FBVTtFQUM3QixNQUFNLEVBQUUsSUFBSztFQUNiLG1CQUFtQixFQUFFLE1BQU0sQ0FBQyxNQUFrRDtFQUM5RSxLQUFLLEVBQUUsTUFBTyxHQUNkOztBQU5GLEFBQUEsSUFBSSxDQUFKO0VBQ0EsZ0JBQWdCLEVBQUUsK0JBQUc7RUFDbkIsaUJB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 */

@@ -1,8 +1,12 @@
-<div>
-	<span class='col-md-6 col-sm-6'><h2>Team Name</h2></span>
-	<span class='col-md-6 col-sm-6'><h2>Team Wins</h2></span>
-</div>
-<div ng-repeat='team in nbaTeams'>
-	<span class='col-md-6 col-sm-6'><h3>{{team.name}}</h3></span>
-	<span class='col-md-6 col-sm-6'><h3>{{team.abbr}}</h3></span>
-</div>
+<table style="width:100%">
+  <tr>
+    <th style='color:white'>Team Logo</th>
+    <th>Team Name</th> 
+    <th>Team Abbr</th>
+  </tr>
+  <tr ng-repeat='team in nbaTeams'>
+    <td class='{{team.abbr}}'></td>
+    <td>{{team.name}}</td> 
+    <td>{{team.abbr}}</td>
+  </tr>
+</table>
