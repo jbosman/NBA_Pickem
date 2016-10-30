@@ -11,6 +11,7 @@ app.controller('LoginCtrl', function ($scope, AuthService, $state, UserFactory) 
 
     $scope.login = {};
     $scope.error = null;
+    $scope.isLoginState = () => {return true;}
 
     $scope.sendLogin = function (loginInfo) {
 
