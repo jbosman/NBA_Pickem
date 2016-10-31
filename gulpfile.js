@@ -11,6 +11,7 @@ let sourcemaps = require('gulp-sourcemaps');
 let notify = require('gulp-notify');
 let sass = require('gulp-sass');
 let rename = require('gulp-rename');
+var minifyCSS = require('gulp-minify-css');
 
 gulp.task('reload', function () {
     livereload.reload();
