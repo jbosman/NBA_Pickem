@@ -1,5 +1,9 @@
-.teamHeader {
-	color: white;
+.nbaTeamName{
+	
+}
+
+.nbaTeamWins{
+	text-align: center;
 }
 
 .teamTotalText {
@@ -9,5 +13,12 @@
 }
 
 .teamTotal {
+	text-align: center;
 	font-weight: bold;
 }
+
+@media screen and (max-width: $mobileScreenSize) {
+	//background-size: 200px 200px;
+}
+	
+

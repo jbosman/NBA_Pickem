@@ -1,0 +1,23 @@
+.navbar{
+	background:linear-gradient(90deg, #0837B6 50%, #F64657 50%)
+}
+
+.navBarImg {
+	position: relative;
+	left: 47.75%;
+	width: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+
+.navbar{
+	height: 90px;
+}
+
+.navBarImg {
+	position: relative;
+	left: 45.5%;
+	width: 10%;
+}
+
+}

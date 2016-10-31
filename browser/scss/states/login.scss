@@ -1,0 +1,35 @@
+$formHeight: 80px;
+
+#login-form{
+	display: inline-block;
+	text-align: center;
+	margin: 0 25%;
+	width: 50%;
+	font-size: 32px;
+}
+
+.form-control {
+	height: $formHeight;
+	font-size: 40px;
+	text-align: center;
+}
+
+.btn {
+	height: $formHeight;
+	width: 100%;
+	font-size: 32px;
+}
+
+@media screen and (max-width: $mobileScreenSize) {
+
+	#login-form{
+	margin: 0 0%;
+	width: 100%;
+	font-size: 250%;
+}
+
+	.form-control {
+	font-size: 200%;
+	text-align: center;
+}
+}
