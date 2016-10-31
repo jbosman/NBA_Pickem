@@ -51,7 +51,8 @@
     "request": "^2.76.0",
     "request-promise": "^4.1.1",
     "run-sequence": "^1.2.2",
-    "sequelize": "^3.24.5"
+    "sequelize": "^3.24.5",
+    "serve-favicon": "^2.3.0"
   },
   "devDependencies": {}
 }
