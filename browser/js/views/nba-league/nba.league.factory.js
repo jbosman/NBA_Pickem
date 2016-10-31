@@ -7,7 +7,7 @@ app.factory('NBA_League_Factory', function($http, $log){
 	(function getNBATeamInfo(){
 		return $http.get('api/nba-teams/wins/2016')
 	    .then( response => {
-	    	nbaTeamInfo = response.data;
+			nbaTeamInfo = response.data;
 	    })
 	    .catch($log)
 	})()

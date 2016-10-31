@@ -3,4 +3,4 @@ app.directive('tabmenu', function(){
 		restrict: 'E',
 		templateUrl: 'js/directives/tabMenu/tabMenu.html',
 	}
-})
+});
