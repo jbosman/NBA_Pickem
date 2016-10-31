@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/main.js"
+    "start": "nodemon server/main.js",
+    "postinstall": "gulp build"
   },
   "author": "Joey Bosman",
   "license": "ISC",
