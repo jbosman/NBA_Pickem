@@ -92,7 +92,9 @@ let createdUsers;
 let createdNBATeams;
 let createdTeams;
 
-db.sync({ force: true })
+function seedDB() {
+
+return db.sync({ force: true })
     .then( () => seedUsers() )
     .then( (users) => {
         createdUsers = users;
@@ -112,9 +114,15 @@ db.sync({ force: true })
     .then( () => draftForTeams() )
     .then( () => {
         console.log(chalk.green('Seed successful!'));
-        process.exit(0);
+        //process.exit(0);
     })
     .catch( (err) => {
         console.error(err);
         process.exit(1);
     });
+
+}
+
+module.exports = {
+    seedDB: seedDB
+}
