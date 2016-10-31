@@ -1,7 +1,30 @@
+// Mobile settings (overrule any above)
+$mobileScreenSize: 1000px;
+
 body {
 	margin-top: 10%;
 }
 
-@import 'directives/navbar/main';
+@media screen and (max-width: $mobileScreenSize) {
+
+	body{
+		margin-top: 15%;
+	}
+
+	.container{
+		width: 95%;
+	}
+}
+
+@import 'site-theme/font';
+@import 'site-theme/header';
+@import 'site-theme/table';
+
+@import 'directives/navbar';
+@import 'directives/tabMenu';
+
 @import 'nba-logos/main';
-@import 'states/team'
+
+@import 'states/team';
+@import 'states/login';
+@import 'states/user'

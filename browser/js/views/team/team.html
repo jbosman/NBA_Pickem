@@ -1,14 +1,19 @@
 <tabmenu></tabmenu>
-<table style="width:100%">
-  <tr>
-    <th class='teamHeader'>Team Logo</th>
-    <th class='teamHeader'>Team Name</th> 
-    <th class='teamHeader'>Team Wins</th>
+<table>
+  <tr class='hideHeader'>
+    <th>Team Logo</th>
+    <th>Team Name</th> 
+    <th>Team Wins</th>
   </tr>
   <tr ng-repeat='team in nbaTeams | orderBy:["wins"]: true'>
-    <td class='{{team.abbr}}'></td>
-    <td>{{team.name}}</td> 
-    <td>{{team.wins}}</td>
+    <td class='{{team.abbr}} nbaLogo'></td>
+    <td class='nbaTeamName'>{{team.name}}</td> 
+    <td class='nbaTeamWins'>{{team.wins}}</td>
+  </tr>
+  <tr class='hideHeader'> <!-- This row is just here for spacing -->
+    <th>Spacer</th>
+    <th>Spacer</th> 
+    <th>Spacer</th>
   </tr>
   <tr>
     <td></td>
