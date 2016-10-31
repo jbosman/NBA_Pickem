@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "NBA Fantasy web app where users select NBA teams instead of players to gain the most number of wins for the season.",
   "main": "index.js",
+  "engines": {
+    "node": "6.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/main.js",
