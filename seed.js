@@ -92,8 +92,6 @@ let createdUsers;
 let createdNBATeams;
 let createdTeams;
 
-
-
 db.sync({ force: true })
     .then( () => seedUsers() )
     .then( (users) => {
@@ -114,7 +112,7 @@ db.sync({ force: true })
     .then( () => draftForTeams() )
     .then( () => {
         console.log(chalk.green('Seed successful!'));
-        //process.exit(0);
+        process.exit(0);
     })
     .catch( (err) => {
         console.error(err);
