@@ -2,7 +2,6 @@
 var chalk = require('chalk');
 var db = require('./db');
 let updateWins = require('./utilities/updateNBATeams').updateWins;
-let seedDB = require('../seed.js').seedDB;
 
 // Create a node server instance! cOoL!
 var server = require('http').createServer();
@@ -30,8 +29,7 @@ var startServer = function () {
 
 };
 
-db.sync()
-.then(seedDB)
+db.sync({force: true})
 .then(createApplication)
 .then(startServer)
 .catch(function (err) {
