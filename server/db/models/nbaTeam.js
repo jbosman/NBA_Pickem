@@ -11,5 +11,11 @@ module.exports = db.define( 'nbaTeam', {
 		type: Sequelize.STRING,
 		allowNull: false,
 		isAlpha: true
+	},
+	wins: {
+		type: Sequelize.INTEGER,
+		allowNull: true,
+		isNumeric: true,
+		defaultValue: 0
 	}
 });

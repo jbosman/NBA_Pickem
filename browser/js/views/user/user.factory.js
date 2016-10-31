@@ -1,14 +1,16 @@
 app.factory( 'UserFactory', function($http, Session, $log){
 
 	let userTeams = [];
-	let userSelectedTeam = undefined;
-
+	let userSelectedTeamID = undefined;
+	let userSelectedLeagueID = undefined;
 
 	function initUserFactory(){
 		return $http.get('api/team/user/' + Session.user.id )
 		.then( response => {
 			userTeams = response.data;
-			userSelectedTeam = userTeams[0];
+			// Intialize these to first team and league to start
+			userSelectedTeamID = userTeams[0].id;
+			userSelectedLeagueID = userTeams[0].league.id;
 		})
 		.catch($log)
 	}
@@ -16,7 +18,8 @@ app.factory( 'UserFactory', function($http, Session, $log){
 	return {
 		initUserFactory: initUserFactory,
 		getUserTeams: () => userTeams,
-		getSelectedTeam: () => userSelectedTeam
+		getSelectedTeamID: () => userSelectedTeamID,
+		getSelectedLeagueID: () => userSelectedLeagueID,
 	}
 
 });

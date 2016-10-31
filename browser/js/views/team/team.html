@@ -5,9 +5,14 @@
     <th class='teamHeader'>Team Name</th> 
     <th class='teamHeader'>Team Wins</th>
   </tr>
-  <tr ng-repeat='team in nbaTeams'>
+  <tr ng-repeat='team in nbaTeams | orderBy:["wins"]: true'>
     <td class='{{team.abbr}}'></td>
     <td>{{team.name}}</td> 
-    <td>{{team.abbr}}</td>
+    <td>{{team.wins}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class='teamTotalText'>Total: </td> 
+    <td class='teamTotal'>{{teamTotalWins}}</td>
   </tr>
 </table>

@@ -1,4 +1,4 @@
-app.controller( 'NBA_Ctrl', function( $scope, NBA_League_Factory, $log){
+app.controller( 'NBA_Ctrl', function( $scope, NBA_League_Factory){
 
 	$scope.tab = { nbaStandings: 'active' }
 
