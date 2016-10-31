@@ -21,10 +21,10 @@ var startServer = function () {
 
     // Update the nba wins every hour
     (function update(){
-    	setTimeout( function(){
-    		updateWins();
-    		update();
-    	}, 3600000)
+        setTimeout( function(){
+            updateWins();
+            update();
+        }, 3600000)
     })()
 
 };
