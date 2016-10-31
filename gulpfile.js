@@ -60,6 +60,26 @@ gulp.task('buildCSS', function () {
         .pipe(gulp.dest('./public'));
 });
 
+gulp.task('buildJSProduction', function () {
+    return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
+        .pipe(concat('main.js'))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(ngAnnotate())
+        .pipe(uglify())
+        .pipe(gulp.dest('./public'));
+});
+
+gulp.task('buildCSSProduction', function () {
+    return gulp.src('./browser/scss/main.scss')
+        .pipe(sass())
+        .pipe(rename('style.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./public'))
+});
+
+
 // Composed tasks
 // --------------------------------------------------------------
 
