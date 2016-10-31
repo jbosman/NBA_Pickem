@@ -33,8 +33,7 @@ app.get( '/:id/teams', (req, res, next) => {
 		return filtered;
 	})
 	.then( filteredTeams => {
-		
-		filteredTeams.forEach( (group,i) => {
+		filteredTeams.forEach( ( group, i) => {
 			let sum = 0;
 			group.forEach( team => {
 				sum += team.wins;
