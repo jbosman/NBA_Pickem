@@ -24,7 +24,7 @@ var startServer = function () {
         setTimeout( function(){
             updateWins();
             update();
-        }, 60000)
+        }, 1800000)
     })()
 
 };
