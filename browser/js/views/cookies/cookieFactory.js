@@ -17,8 +17,6 @@ app.factory( 'CookieFactory', function(){
 		cookieObj.password = loginInfo.password;
 		document.cookie = 'userInfoJSON=' + JSON.stringify( cookieObj );
 		resetCookieExpire();
-		console.log('set cookie!');
-		console.log( document.cookie );
 	}
 
 	function resetCookieExpire(){

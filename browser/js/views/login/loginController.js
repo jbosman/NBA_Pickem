@@ -14,8 +14,6 @@ app.controller('LoginCtrl', function ($scope, LoginFactory, CookieFactory) {
     $scope.sendLogin = sendLoginNow
 
     if ( CookieFactory.isCookie() ){
-		console.log( 'cookie found!' );
-		console.log( CookieFactory.getCookie() );
 		sendLoginNow( CookieFactory.getCookie() );
     }
 
