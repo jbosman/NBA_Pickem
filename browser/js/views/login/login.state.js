@@ -6,22 +6,3 @@ app.config(function($stateProvider){
 		controller: 'LoginCtrl'
 	})
 });
-
-app.controller('LoginCtrl', function ($scope, AuthService, $state, UserFactory) {
-
-    $scope.login = {};
-    $scope.error = null;
-    $scope.isLoginState = () => {return true;}
-
-    $scope.sendLogin = function (loginInfo) {
-
-        $scope.error = null;
-
-        AuthService.login(loginInfo).then( () => UserFactory.initUserFactory() )
-        .then( () => { $state.go('user') })
-        .catch( () => { $scope.error = 'Invalid login credentials.' });
-
-    };
-
-});
-
