@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs site-font">
   <li role="presentation" class='{{tab.home}}'><a ui-sref='user'>Home</a></li>
   <li role="presentation" class='{{tab.nbaStandings}}'><a ui-sref='nbaLeague'>NBA Standings</a></li>
-  <li role="presentation" class='{{tab.team}}'><a>Team</a></li>
-  <li role="presentation" class='{{tab.league}}'><a>League</a></li>
+  <li role="presentation" class='{{tab.team}}'><a ui-sref='team({ id: teamId })'>Team</a></li>
+  <li role="presentation" class='{{tab.league}}'><a ui-sref='league({ id: leagueId })'>League</a></li>
 </ul>
