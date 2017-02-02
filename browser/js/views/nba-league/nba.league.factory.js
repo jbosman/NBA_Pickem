@@ -16,8 +16,6 @@ app.factory('NBA_League_Factory', function($http, $log){
 			nbaTeamInfo.push(parseTeamInfo( teamTokens[i]) );
 			nbaTeamInfoObj[nbaTeamInfo[ i - 1 ].abbr] = nbaTeamInfo[ i - 1 ].wins;
 		}
-
-		debugger;
 	}
 
 	function parseTeamInfo(teamInfoStr){
