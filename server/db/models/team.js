@@ -7,11 +7,5 @@ module.exports = db.define( 'team', {
 		allowNull: false,
 		isAlphanumeric: true,
 		len: [6, 25]
-	},
-	wins: {
-		type: Sequelize.INTEGER,
-		allowNull: false,
-		isNumeric: true,
-		defaultValue: 0
 	}
 });

@@ -5,10 +5,10 @@
     <th>Team Name</th> 
     <th>Team Wins</th>
   </tr>
-  <tr ng-repeat='team in nbaTeams | orderBy:["wins"]: true'>
+  <tr ng-repeat='team in getNBATeams() | orderBy:["wins"]: true'>
     <td class='{{team.abbr}} nbaLogo'></td>
-    <td class='nbaTeamName'>{{team.name}}</td> 
-    <td class='nbaTeamWins'>{{team.wins}}</td>
+    <td class='nbaTeamName'>{{ team.name }}</td> 
+    <td class='nbaTeamWins'>{{ team.wins }}</td>
   </tr>
   <tr class='hideHeader'> <!-- This row is just here for spacing -->
     <th>Spacer</th>
@@ -18,6 +18,6 @@
   <tr>
     <td></td>
     <td class='teamTotalText'>Total: </td> 
-    <td class='teamTotal'>{{teamTotalWins}}</td>
+    <td class='teamTotal'>{{ getTeamTotalWins(getNBATeams()) }}</td>
   </tr>
 </table>

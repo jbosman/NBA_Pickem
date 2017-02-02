@@ -1,7 +1,9 @@
-app.controller('LoginCtrl', function ($scope, LoginFactory, CookieFactory) {
+app.controller('LoginCtrl', function ($scope, LoginFactory, CookieFactory, NBA_League_Factory) {
     $scope.login = {};
     $scope.error = null;
     $scope.isLoginState = () => {return true;}
+
+    NBA_League_Factory.kickOffNBATeamWinGetter(); // Start right when we hit the login page
 
     function sendLoginNow(loginInfo){
 

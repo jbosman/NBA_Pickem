@@ -72,7 +72,8 @@ function seedLeague(){
 
 function seedTeams(){
     let creatingTeams = createdUsers.map( user => { 
-        let teamName = user.email.split('@')[0] + "'s team";
+        let teamName = user.email.split('@')[0] + "'s Team";
+        
         return Team.create({name: teamName, leagueId: createdLeague.id, userId: user.id})
     })
 

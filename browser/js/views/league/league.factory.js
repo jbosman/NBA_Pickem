@@ -1,16 +1,30 @@
-app.factory('LeagueFactory', function($http, $stateParams){
+app.factory('LeagueFactory', function($http, $stateParams, TeamFactory){
 
-	function getLeagueTeams(){
-		return $http.get('/api/league/' + $stateParams.id + '/teams' )
+	let leagueTeams;
+
+	function getLeagueTeamsFromServer(){
+		$http.get('/api/league/' + $stateParams.id + '/teams' )
 		.then( response => {
-			console.log(response.data)
-			return response.data;
+			leagueTeams = response.data;
+			console.log(leagueTeams)
 		})
 	}
 
-	return {
-		getLeagueTeams: getLeagueTeams,
+	function updateLeagueTeams(){
+		leagueTeams.forEach( team => {
+			team.totalWins = TeamFactory.getTeamTotalWins(team.teams)
+		})
+	}
 
+	function getLeagueTeams(){
+		console.log(leagueTeams)
+		updateLeagueTeams();
+		return leagueTeams;
+	}
+
+	return {
+		getLeagueTeamsFromServer: getLeagueTeamsFromServer,
+		getLeagueTeams: getLeagueTeams
 	}
 
 });

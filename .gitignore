@@ -2,6 +2,7 @@
 
 ### Project Specific ###
 node_modules
+public
 
 ### macOS ###
 *.DS_Store

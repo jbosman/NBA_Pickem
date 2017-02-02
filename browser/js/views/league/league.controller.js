@@ -1,7 +1,9 @@
-app.controller( 'LeagueCtrl', function($scope, $http, LeagueFactory){
+app.controller( 'LeagueCtrl', function($scope, $http, LeagueFactory, TeamFactory){
 
 	$scope.tab = { league: 'active' }
 
-	LeagueFactory.getLeagueTeams()
-	.then(leagueTeams => { $scope.teams = leagueTeams })
+	LeagueFactory.getLeagueTeamsFromServer();
+
+	$scope.getLeagueTeams = LeagueFactory.getLeagueTeams;
+
 });

@@ -4,5 +4,4 @@ app.controller( 'NBA_Ctrl', function( $scope, NBA_League_Factory){
 
 	$scope.nbaTeamsInfo = NBA_League_Factory.getNBATeamInfo;
 
-
 });

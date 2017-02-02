@@ -1,21 +1,49 @@
-app.factory( 'TeamFactory', ( $http, $stateParams, $log) => {
+app.factory( 'TeamFactory', ( $http, $stateParams, $log, NBA_League_Factory ) => {
 
-	let teamTotalWins = 0;
+	let NBAteams = [];
 
-	function getTeams(){
+	function getTeamFromServer(){
 
-		return $http.get('api/team/' + $stateParams.id + '/nba_teams')
+		$http.get('api/team/' + $stateParams.id + '/nba_teams')
 		.then( response => {
-			teamTotalWins = 0;
-			response.data.forEach( team => { teamTotalWins += team.wins })
-			return response.data;
+			NBAteams = response.data;
 		})
 		.catch($log)
 	}
 
+	function updateNBATeams(){
+		NBAteams.forEach( team => {
+			team.wins = getNBATeamWins(team.abbr);
+		})
+	}
+
+	function getNBATeamWins(abbr){
+		let liveNBATeamInfoObj = NBA_League_Factory.getNBATeamInfoObj();
+		return liveNBATeamInfoObj[abbr];
+	}
+
+	function getTeamTotalWins(teams){
+		
+		let sum = 0;
+		let liveNBATeamInfoObj = NBA_League_Factory.getNBATeamInfoObj();
+
+		teams.forEach( team => {
+			sum += Number(liveNBATeamInfoObj[team.abbr]);
+		})
+
+		return sum;
+	}
+
+	// Doing this to allow for sorting the teams by wins
+	function getNBATeams(){
+		updateNBATeams();
+		return NBAteams;
+	}
+
 	return {
-		getTeams: getTeams,
-		getTeamWinTotal: () => teamTotalWins,
+		getNBATeams: getNBATeams,
+		getTeamTotalWins: getTeamTotalWins,
+		getTeamFromServer: getTeamFromServer
 	}
 
 });

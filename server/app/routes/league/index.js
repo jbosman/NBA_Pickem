@@ -20,6 +20,7 @@ app.get( '/:id/teams', (req, res, next) => {
 		return Promise.all(grabingNBATeams)
 	})
 	.then( nbaTeams => {
+		// Filter of only relavent data from new query
 		let filtered = [];
 
 		nbaTeams.forEach( arrayOfTeams => {
@@ -33,12 +34,9 @@ app.get( '/:id/teams', (req, res, next) => {
 		return filtered;
 	})
 	.then( filteredTeams => {
+		// Attach the nba team groups to each team
 		filteredTeams.forEach( ( group, i) => {
-			let sum = 0;
-			group.forEach( team => {
-				sum += team.wins;
-			})
-			teamsInLeagueSave[i].wins = sum;
+			teamsInLeagueSave[i].dataValues.teams = group;
 		})
 
 		res.send(teamsInLeagueSave);

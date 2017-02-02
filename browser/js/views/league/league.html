@@ -5,8 +5,8 @@
     <th class='center'>Team Name</th>
     <th class='center'>Team Wins</th>
   </tr>
-  <tr ng-repeat='team in teams | orderBy:["wins"]: true'>
-    <td><a ui-sref='team({ id: team.id })'>{{team.name}}</a></td>
-    <td>{{team.wins}}</td>
+  <tr ng-repeat='team in getLeagueTeams() | orderBy:["totalWins"]: true'>
+    <td><a ui-sref='team({ id: team.id })'>{{ team.name }}</a></td>
+    <td>{{ team.totalWins }}</td>
   </tr>
 </table>
