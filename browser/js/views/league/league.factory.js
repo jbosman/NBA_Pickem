@@ -1,12 +1,11 @@
 app.factory('LeagueFactory', function($http, $stateParams, TeamFactory){
 
-	let leagueTeams;
+	let leagueTeams = [];
 
 	function getLeagueTeamsFromServer(){
 		$http.get('/api/league/' + $stateParams.id + '/teams' )
 		.then( response => {
 			leagueTeams = response.data;
-			console.log(leagueTeams)
 		})
 	}
 
@@ -17,7 +16,6 @@ app.factory('LeagueFactory', function($http, $stateParams, TeamFactory){
 	}
 
 	function getLeagueTeams(){
-		console.log(leagueTeams)
 		updateLeagueTeams();
 		return leagueTeams;
 	}
