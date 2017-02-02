@@ -50,7 +50,7 @@ app.factory('NBA_League_Factory', function($http, $log){
 
 		let year = 2017; // Right now just set to get current year
 
-		let host = 'http://www.espn.com';
+		let host = 'https://www.espn.com';
 		let espnPath =
 			year >= (new Date()).getFullYear() || year <= 2002 ?
 			'/nba/standings/_/group/league' :
