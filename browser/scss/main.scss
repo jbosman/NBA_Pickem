@@ -1,8 +1,24 @@
 // Mobile settings (overrule any above)
 $mobileScreenSize: 1000px;
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: 22px;
+}
+
 body {
 	margin-top: 10%;
+}
+
+section {
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
 
 @media screen and (max-width: $mobileScreenSize) {
@@ -20,11 +36,14 @@ body {
 @import 'site-theme/header';
 @import 'site-theme/table';
 
+@import 'directives/nba-team-repeat';
 @import 'directives/navbar';
 @import 'directives/tabMenu';
 
 @import 'nba-logos/main';
 
+@import 'states/league';
 @import 'states/team';
 @import 'states/login';
+@import 'states/nba-league';
 @import 'states/user'

@@ -1,24 +1,7 @@
-.nbaTeamName{
-	
-}
-
-.nbaTeamWins{
-	text-align: center;
-}
-
-.teamTotalText {
-	text-align: right;
-	font-weight: bold;
-	padding-right: 6%;
-}
-
-.teamTotal {
-	text-align: center;
-	font-weight: bold;
-}
-
-@media screen and (max-width: $mobileScreenSize) {
-	//background-size: 200px 200px;
+.section-team {
+	.totalText {
+		text-align: right;
+	}
 }
 	
 

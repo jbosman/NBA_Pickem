@@ -1,12 +1,21 @@
 <tabmenu></tabmenu>
 
-<table class='center'>
-  <tr>
-    <th class='center'>Team Name</th>
-    <th class='center'>Team Wins</th>
-  </tr>
-  <tr ng-repeat='team in getLeagueTeams() | orderBy:["totalWins"]: true'>
-    <td><a ui-sref='team({ id: team.id })'>{{ team.name }}</a></td>
-    <td>{{ team.totalWins }}</td>
-  </tr>
-</table>
+<section class='section-league'>
+	<div class='row header justify-content-center'>
+		<div class='col-xs-6'>
+			<h1>Team Name</h1>
+		</div>
+		<div class='col-xs-6'>
+			<h1>Team Wins</h1>
+		</div>
+	</div>
+
+	<div class='row userContent' ng-repeat='team in getLeagueTeams() | orderBy:["totalWins"]: true'>
+		<div class='col-xs-6 '>
+			<a ui-sref='team({ id: team.id })'><h1>{{ team.name }}</h1></a>
+		</div>
+		<div class='col-xs-6'>
+			<h1>{{ team.totalWins }}</h1>
+		</div>   
+	</div>
+</section>

@@ -18,7 +18,6 @@ module.exports = year => {
 
 	return RequestPromise( host + espnPath ) // eslint-disable-line new-cap
 	.then( response => {
-		
 		return scrapeESPN_HTML(response);
 	})
 }

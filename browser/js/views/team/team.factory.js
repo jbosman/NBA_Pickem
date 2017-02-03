@@ -23,7 +23,6 @@ app.factory( 'TeamFactory', ( $http, $stateParams, $log, NBA_League_Factory ) =>
 	}
 
 	function getTeamTotalWins(teams){
-		
 		let sum = 0;
 		let liveNBATeamInfoObj = NBA_League_Factory.getNBATeamInfoObj();
 

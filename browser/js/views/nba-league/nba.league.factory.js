@@ -1,4 +1,4 @@
-app.factory('NBA_League_Factory', function($http, $log){
+app.factory('NBA_League_Factory', function($http){
 
 	let nbaTeamInfo = [];
 	let nbaTeamInfoObj = {};
@@ -10,11 +10,10 @@ app.factory('NBA_League_Factory', function($http, $log){
 		// Clear old data
 		nbaTeamInfo = [];
 		nbaTeamInfoObj = {};
-	
 		// Populate nba team info objects
 		for (let i = 1; i < teamTokens.length; i++ ){ // starting at 1 here because the first token is garbage
 			nbaTeamInfo.push(parseTeamInfo( teamTokens[i]) );
-			nbaTeamInfoObj[nbaTeamInfo[ i - 1 ].abbr] = nbaTeamInfo[ i - 1 ].wins;
+			nbaTeamInfoObj[nbaTeamInfo[ i - 1 ].abbr] = Number(nbaTeamInfo[ i - 1 ].wins);
 		}
 	}
 
@@ -33,7 +32,7 @@ app.factory('NBA_League_Factory', function($http, $log){
 		// Parse team wins
 		let winsArr = teamInfoStr.split('class="">')
 		let wins = winsArr[1].slice(0, winsArr[1].indexOf('</td>'));
-		teamInfo.wins = wins;
+		teamInfo.wins = Number(wins);
 
 		return teamInfo;
 	}
