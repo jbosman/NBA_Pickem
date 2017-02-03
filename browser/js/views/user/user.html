@@ -1,17 +1,22 @@
 <tabmenu></tabmenu>
-<div class='userView site-font'>
-	<div>
-		<span class='col-md-6 col-sm-6 boldHeader'>Team Name</span>
-		<span class='col-md-6 col-sm-6 boldHeader'>League Name</span>
-	</div>
-	<div class='userDiv'>
-		<div ng-repeat='team in userTeams'>
-			<a ui-sref='team({ id: team.id })'>
-				<span class='col-md-6 col-sm-6'>{{team.name}}</span>
-			</a>
-			<a ui-sref='league({ id: team.league.id })'>
-				<span class='col-md-6 col-sm-6'>{{team.league.name}}</span>
-			</a>
+<section class='section-user'>
+
+	<div class='row header justify-content-center'>
+		<div class='col-xs-6'>
+			<h1>Team Name</h1>
+		</div>
+		<div class='col-xs-6'>
+			<h1>League Name</h1>
 		</div>
 	</div>
-</div>
+
+	<div class='row userContent' ng-repeat='team in userTeams'>
+		<div class='col-xs-6 '>
+			<a ui-sref='team({ id: team.id })'><h1>{{team.name}}</h1></a>
+		</div>
+		<div class='col-xs-6'>
+			<a ui-sref='league({ id: team.league.id })'><h1>{{team.league.name}}</h1></a>
+		</div>   
+	</div>
+
+</section>

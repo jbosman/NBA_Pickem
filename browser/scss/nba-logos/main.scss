@@ -38,7 +38,7 @@ $vIncrement: -100;
 	background-image: url('img/teams-nba-sprite.png');
   	background-repeat: no-repeat;
   	height: 50px;
-  	background-position: center #{ (index($NBA_TEAMS, $team) - 1) * $vIncrement}px;
+  	background-position: 90% #{ (index($NBA_TEAMS, $team) - 1) * $vIncrement}px;
   	align: center;
   }
 }

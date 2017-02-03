@@ -1,4 +1,4 @@
-app.controller( 'LeagueCtrl', function($scope, $http, LeagueFactory, TeamFactory){
+app.controller( 'LeagueCtrl', function($scope, $http, LeagueFactory ){
 
 	$scope.tab = { league: 'active' }
 

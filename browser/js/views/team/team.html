@@ -1,23 +1,15 @@
 <tabmenu></tabmenu>
-<table>
-  <tr class='hideHeader'>
-    <th>Team Logo</th>
-    <th>Team Name</th> 
-    <th>Team Wins</th>
-  </tr>
-  <tr ng-repeat='team in getNBATeams() | orderBy:["wins"]: true'>
-    <td class='{{team.abbr}} nbaLogo'></td>
-    <td class='nbaTeamName'>{{ team.name }}</td> 
-    <td class='nbaTeamWins'>{{ team.wins }}</td>
-  </tr>
-  <tr class='hideHeader'> <!-- This row is just here for spacing -->
-    <th>Spacer</th>
-    <th>Spacer</th> 
-    <th>Spacer</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td class='teamTotalText'>Total: </td> 
-    <td class='teamTotal'>{{ getTeamTotalWins(getNBATeams()) }}</td>
-  </tr>
-</table>
+
+<section class='section-team'>
+  <nba-team-repeat nbateams='getNBATeams()'></nba-team-repeat>
+  
+  <div class='row totalWins'>
+    <div class='col-lg-9 col-md-9 col-sm-9 col-xs-9'>
+      <h1 class='totalText'>Total: </h1>
+    </div>
+    <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+      <h1>{{ getTeamTotalWins(getNBATeams()) }}</h1>
+    </div>
+  </div>
+  
+</section>

@@ -1,13 +1,12 @@
 <tabmenu></tabmenu>
-<table style="width:100%">
-  <tr>
-    <th class='hideHeader'>Team Logo</th>
-    <th class='hideHeader'>Team Name</th> 
-    <th class='hideHeader'>Team Wins</th>
-  </tr>
-  <tr ng-repeat='team in nbaTeamsInfo()'>
-    <td class='{{team.abbr}}'></td>
-    <td>{{team.name}}</td> 
-    <td>{{team.wins}}</td>
-  </tr>
-</table>
+<section class='section-nba-league'>
+	<nba-team-repeat nbateams='nbaTeamsInfo()'></nba-team-repeat>
+</section>
+
+<!-- <section class='section-nba-league'>
+  <div class='row justify-content-center' ng-repeat='team in nbaTeamsInfo()'>
+    <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 {{team.abbr}} logo'></div>
+    <div class='col-lg-6 col-md-6 col-sm-6 col-xs-6'><h1 class='teamName'>{{team.name}}</h1></div>
+    <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'><h1 class='teamWins'>{{team.wins}}</h1></div>
+  </div>
+</section> -->
