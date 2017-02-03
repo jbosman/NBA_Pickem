@@ -6,7 +6,6 @@ app.factory('NBA_League_Factory', function($http){
 	function scrapeESPNhtml(nbaPage){
 		let teamTokenizer = '<span class="team-names">';
 		let teamTokens = nbaPage.split(teamTokenizer);
-
 		// Clear old data
 		nbaTeamInfo = [];
 		nbaTeamInfoObj = {};
@@ -71,7 +70,8 @@ app.factory('NBA_League_Factory', function($http){
 	return {
 		getNBATeamInfo: () => nbaTeamInfo,
 		getNBATeamInfoObj: () => nbaTeamInfoObj,
-		kickOffNBATeamWinGetter: kickOffNBATeamWinGetter
+		getNBATeamInfoFromESPN: getNBATeamInfoFromESPN,
+		kickOffNBATeamWinGetter: kickOffNBATeamWinGetter,
 	}
 
 });

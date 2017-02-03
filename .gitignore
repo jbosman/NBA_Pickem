@@ -3,6 +3,7 @@
 ### Project Specific ###
 node_modules
 public
+coverage
 
 ### macOS ###
 *.DS_Store

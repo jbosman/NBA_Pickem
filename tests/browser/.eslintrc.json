@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
+  "globals": {
+    "app": true,
+    "module": true,
+    "inject": true,
+    "expect": true,
+    "sinon": true
+  }
+}

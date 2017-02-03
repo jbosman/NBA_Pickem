@@ -11,7 +11,9 @@ let sourcemaps = require('gulp-sourcemaps');
 let notify = require('gulp-notify');
 let sass = require('gulp-sass');
 let rename = require('gulp-rename');
-var minifyCSS = require('gulp-minify-css');
+let minifyCSS = require('gulp-minify-css');
+let karma = require('karma');
+let mocha = require('gulp-spawn-mocha');
 
 gulp.task('reload', function () {
     livereload.reload();
@@ -43,6 +45,16 @@ gulp.task('buildJS', ['lintJS'], function () {
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public'));
+});
+
+gulp.task('testBrowserJS', function (done) {
+    //testing environment variable
+    process.env.NODE_ENV = 'testing';
+    var server = new karma.Server({
+        configFile: __dirname + '/tests/browser/karma.conf.js',
+        singleRun: true
+    }, done);
+    server.start();
 });
 
 gulp.task('buildCSS', function () {
@@ -110,6 +122,8 @@ gulp.task('default', function () {
 
     // Reload when a template (.html) file changes.
     gulp.watch(['browser/**/*.html', 'server/app/views/*.html'], ['reload']);
+
+    gulp.watch('tests/browser/**/*', ['testBrowserJS']);
 
     livereload.listen();
 
