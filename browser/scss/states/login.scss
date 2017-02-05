@@ -5,32 +5,39 @@ $formHeight: 80px;
 	text-align: center;
 	margin: 0 25%;
 	width: 50%;
-	font-size: 32px;
+	font-size: 145%;
 }
 
 .form-control {
 	height: $formHeight;
-	font-size: 40px;
+	font-size: 180%;
 	text-align: center;
 }
 
 .btn {
 	height: $formHeight;
 	width: 100%;
-	font-size: 32px;
+	font-size: 145%;
 	margin-top: 5px;
 }
 
-@media screen and (max-width: $mobileScreenSize) {
-
+@media only screen and (max-width: 767px) {
 	#login-form{
-	margin: 0 0%;
-	width: 100%;
-	font-size: 250%;
+		margin: 0 12.5%;
+		width: 75%;
+		font-size: 250%;
+	}
+
+	.form-control { font-size: 120%; }
+
+	.btn { font-size: 120%; }
 }
 
-	.form-control {
-	font-size: 200%;
-	text-align: center;
+@media only screen and (max-width: 480px) {
+
+	.form-control { font-size: 100%; }
+	
+	.btn { font-size: 100%; }
 }
-}
+
+

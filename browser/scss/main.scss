@@ -13,23 +13,39 @@ html {
 }
 
 body {
-	margin-top: 10%;
+	margin-top: 15vh;
+	font-size: 100%;
+}
+
+.mainContainer {
+	padding: 0;
+	margin-bottom: 60px;
+	border-radius: 10px;
 }
 
 section {
-	margin-top: 60px;
+	// padding-top: 10vh;
+	padding-top: 60px;
 	margin-bottom: 60px;
+	font-size: 100%;
 }
 
-@media screen and (max-width: $mobileScreenSize) {
+h1 { 
+	margin: 0;
+	font-size: 172%; 
+}
 
-	body{
-		margin-top: 15%;
-	}
+@media only screen and (max-width: 1023px ) {
 
-	.container{
-		width: 95%;
-	}
+	html { font-size: 20px; }
+	.mainContainer { width: 95%; }
+
+}
+
+@media only screen and (max-width: 767px){
+
+	html { font-size: 16px; }
+
 }
 
 @import 'site-theme/font';
