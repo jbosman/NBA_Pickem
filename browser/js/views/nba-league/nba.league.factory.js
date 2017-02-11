@@ -54,6 +54,7 @@ app.factory('NBA_League_Factory', function($http){
 			'/nba/standings/_/group/league' :
 			'/nba/standings/_/season/' + year + '/group/league';
 
+		
 		$http.get( host + espnPath )
 		.then( espnNBAPage => {
 			scrapeESPNhtml(espnNBAPage.data)
