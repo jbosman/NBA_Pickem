@@ -109,6 +109,11 @@ db.sync({ force: true })
     .then( () => seedTeams() )
     .then( teams => {
         createdTeams = teams;
+        console.log("-----------------------------------------------")
+        createdTeams.forEach((team) => {
+            console.log(team.name, " ", team.userId)
+        })
+        console.log("-----------------------------------------------")
     })
     .then( () => draftForTeams() )
     .then( () => {
